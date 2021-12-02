@@ -1,32 +1,46 @@
 package br.edu.iftm.SmartSchool.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Aluno {
-    private int matricula;
+    private Long matricula;
     private String nome_mae;
     private String nome_pai;
     @DateTimeFormat (pattern="dd/MM/yyyy")
     private String data_matricula;   
     private int tel_responsavel;
-    private String login;
     private Usuario usuario;
+    private List<Professor> listaDeProfessores;
 
-    public Aluno(int matricula, String nome_mae, String nome_pai, String data_matricula, int tel_responsavel, String login, Usuario usuario) {
+    public Aluno() {   }
+
+    public Aluno(Long matricula, String nome_mae, String nome_pai, String data_matricula, int tel_responsavel, Usuario usuario) {
         this.matricula = matricula;
         this.nome_mae = nome_mae;
         this.nome_pai = nome_pai;
         this.data_matricula = data_matricula;
         this.tel_responsavel = tel_responsavel;
-        this.login = login;
         this.usuario = usuario;
+        listaDeProfessores = new ArrayList<Professor>();
     }
 
-    public int getMatricula() {
+    
+    public List<Professor> getListaDeProfessores() {
+        return this.listaDeProfessores;
+    }
+
+    public void setListaDeProfessores(List<Professor> listaDeProfessores) {
+        this.listaDeProfessores = listaDeProfessores;
+    }
+
+    public Long getMatricula() {
         return this.matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(Long matricula) {
         this.matricula = matricula;
     }
 
@@ -60,14 +74,6 @@ public class Aluno {
 
     public void setTel_responsavel(int tel_responsavel) {
         this.tel_responsavel = tel_responsavel;
-    }
-
-    public String getLogin() {
-        return this.login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
     }
 
     public Usuario getUsuario() {

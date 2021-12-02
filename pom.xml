@@ -14,7 +14,7 @@
 	<name>SmartSchool</name>
 	<description>Projeto criado para discl=iplina Spring MVC 2o semestre</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

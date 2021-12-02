@@ -15,8 +15,8 @@ public class UsuarioRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public String validaUsuario(Usuario usuario){
-        String consulta = "INSERT INTO usuario(login, senha) VALUES (?,?)";
-        return JdbcTemplate.update(consulta, usuario.getLogin(), usuario.getSenha());
-    }
+    // public String validaUsuario(Usuario usuario){
+    //     String consulta = "INSERT INTO usuario(login, senha) VALUES (?,?)";
+    //     return JdbcTemplate.update(consulta, usuario.getLogin(), usuario.getSenha());
+    // }
 }

@@ -1,5 +1,6 @@
 package br.edu.iftm.SmartSchool.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Professor {
@@ -8,11 +9,11 @@ public class Professor {
     private Usuario usuario;
     private List<Aluno> ListaAlunos;
 
-    public Professor(int cod_professor, String login, Usuario usuario, List<Aluno> ListaAlunos) {
+    public Professor(int cod_professor, String login, Usuario usuario) {
         this.cod_professor = cod_professor;
         this.login = login;
         this.usuario = usuario;
-        this.ListaAlunos = ListaAlunos;
+        this.ListaAlunos = new ArrayList<Aluno>();
     }
 
 
